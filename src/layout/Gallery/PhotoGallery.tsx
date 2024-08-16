@@ -1,13 +1,13 @@
+import { useEffect, useState } from 'react';
 import { Gallery, Item } from 'react-photoswipe-gallery';
 import 'photoswipe/style.css';
 import images from '@/layout/Gallery/Images.ts';
-import { useState, useEffect } from 'react';
 
 const PhotoGallery = () => {
   const smallItemStyles: React.CSSProperties = {
     cursor: 'pointer',
     objectFit: 'contain',
-    width: '100px',
+    width: '130px',
     height: '150px',
   };
   const imageStyles: React.CSSProperties = {
