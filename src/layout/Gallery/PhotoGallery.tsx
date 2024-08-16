@@ -7,8 +7,7 @@ const PhotoGallery = () => {
   const smallItemStyles: React.CSSProperties = {
     cursor: 'pointer',
     objectFit: 'contain',
-    width: '130px',
-    height: '150px',
+    width: '100%',
   };
   const imageStyles: React.CSSProperties = {
     objectFit: 'cover',
@@ -17,7 +16,7 @@ const PhotoGallery = () => {
   };
 
   const [imageSizes, setImageSizes] = useState(
-    images.map(() => ({ width: 1280, height: 1920 })), // 기본값 설정
+    images.map(() => ({ width: 1280, height: 1320 })), // 기본값 설정
   );
 
   useEffect(() => {
@@ -40,7 +39,7 @@ const PhotoGallery = () => {
       <div
         style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(3, 0fr)',
+          gridTemplateColumns: 'repeat(3, 1fr)',
           gridGap: 2,
         }}>
         {images.map((image, index) => {
