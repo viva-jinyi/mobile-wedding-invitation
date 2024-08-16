@@ -63,4 +63,5 @@ const PlusButton = styled.div`
   border-radius: 4px;
   border: 1px solid #dfdfdf;
   cursor: pointer;
+  margin-top: 4px;
 `;

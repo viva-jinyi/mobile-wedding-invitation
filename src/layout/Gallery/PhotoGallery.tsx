@@ -1,6 +1,7 @@
 import { Gallery, Item } from 'react-photoswipe-gallery';
 import 'photoswipe/style.css';
 import images from '@/layout/Gallery/Images.ts';
+import { useState, useEffect } from 'react';
 
 const PhotoGallery = () => {
   const smallItemStyles: React.CSSProperties = {
@@ -9,6 +10,30 @@ const PhotoGallery = () => {
     width: '100px',
     height: '150px',
   };
+  const imageStyles: React.CSSProperties = {
+    objectFit: 'cover',
+    width: '100%',
+    height: '100%',
+  };
+
+  const [imageSizes, setImageSizes] = useState(
+    images.map(() => ({ width: 1280, height: 1920 })), // 기본값 설정
+  );
+
+  useEffect(() => {
+    // 이미지의 실제 크기를 계산하여 설정
+    images.forEach((image, index) => {
+      const img = new Image();
+      img.src = image.source;
+      img.onload = () => {
+        setImageSizes((sizes) => {
+          const newSizes = [...sizes];
+          newSizes[index] = { width: img.width, height: img.height };
+          return newSizes;
+        });
+      };
+    });
+  }, []);
 
   return (
     <Gallery>
@@ -19,22 +44,25 @@ const PhotoGallery = () => {
           gridGap: 2,
         }}>
         {images.map((image, index) => {
+          const { width, height } = imageSizes[index];
           return (
             <Item
               key={index}
               cropped
               original={image.source}
               thumbnail={image.source}
-              width="1280"
-              height="1920">
+              width={width}
+              height={height}>
               {({ ref, open }) => (
-                <img
-                  style={smallItemStyles}
-                  alt={image.alt}
-                  src={image.source}
-                  ref={ref as React.MutableRefObject<HTMLImageElement>}
-                  onClick={open}
-                />
+                <div style={smallItemStyles}>
+                  <img
+                    alt={image.alt}
+                    src={image.source}
+                    style={imageStyles}
+                    ref={ref as React.MutableRefObject<HTMLImageElement>}
+                    onClick={open}
+                  />
+                </div>
               )}
             </Item>
           );
