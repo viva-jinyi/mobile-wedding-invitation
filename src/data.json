@@ -1,7 +1,7 @@
 {
   "greeting": {
     "title": "이진 \uD83D\uDC8D 장수환\n결혼합니다!",
-    "message": "저희 답게 살겠습니다.\n부부로서 첫걸음을 내딛는 그 기쁨의 순간에\n소중한 분들을 초대합니다.",
+    "message": "저희답게 살겠습니다.\n부부로서 첫걸음을 내딛는 순간에\n소중한 분들을 초대합니다.",
     "host": {
       "groom": {
         "name": "장수환",
@@ -28,7 +28,7 @@
         ]
       }
     },
-    "eventDetail": "2024년 11월 9일 (토) 17:00\n수원 파티움하우스 2F 그레이스켈리홀"
+    "eventDetail": "2024년 11월 9일 (토) 17:00\n파티움하우스수원 2F 그레이스켈리홀"
   },
   "hostInfo": [
     {
@@ -71,8 +71,8 @@
     }
   ],
   "mapInfo": {
-    "address1": "파티움하우스 수원",
-    "address2": "경기 수원시 팔달구 효원로 289\n2F 그레이스 켈리홀\n031-221-3434",
+    "address1": "파티움하우스수원 2F 그레이스켈리홀",
+    "address2": "경기 수원시 팔달구 효원로 289\n031-221-3434",
     "naverMap": "https://map.naver.com/p/entry/place/12055125?placePath=%2Fhome&c=15.00,0,0,0,dh",
     "kakaoMap": "https://map.kakao.com/?map_type=TYPE_MAP&itemId=1818839884&q=%ED%8C%8C%ED%8B%B0%EC%9B%80%ED%95%98%EC%9A%B0%EC%8A%A4+%EC%88%98%EC%9B%90&urlLevel=1&urlX=507395&urlY=1045048",
     "lat": 37.2616008,
