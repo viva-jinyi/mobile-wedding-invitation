@@ -37,10 +37,8 @@
         {
           "name": "장수환",
           "relation": "신랑",
-          "bank": "카카오뱅크",
-          "account": "3333-04-1378281",
-          "kakaopayAccount": "",
-          "tossAccount": ""
+          "bank": "카카오",
+          "account": "3333-04-1378281"
         },
         {
           "name": "장순봉",

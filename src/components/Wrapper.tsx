@@ -7,6 +7,10 @@ const Wrapper = styled.section`
   flex-direction: column;
   color: #222;
   overflow: hidden;
+
+  @media screen and (max-width: 500px) {
+    padding: 16px;
+  }
 `;
 
 export default Wrapper;

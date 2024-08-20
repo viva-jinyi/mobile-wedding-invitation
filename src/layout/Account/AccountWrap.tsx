@@ -92,7 +92,9 @@ const Details = styled.div`
   justify-content: space-between;
 `;
 
-const AccountInfo = styled.div``;
+const AccountInfo = styled.div`
+  word-break: break-all;
+`;
 const CopyButton = styled.button`
   border: none;
   border-radius: 5px;
