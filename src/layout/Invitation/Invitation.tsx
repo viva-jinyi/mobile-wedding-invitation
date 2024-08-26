@@ -6,16 +6,19 @@ import { Caption, Paragraph } from '@/components/Text.tsx';
 
 const Invitation = () => {
   const { greeting } = data;
+
+  const googleCalendarURL = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
+    '이진 💍 장수환\n결혼합니다!',
+  )}&dates=20241109T080000Z/20241109T090000Z&details=${encodeURIComponent(
+    '저희답게 살겠습니다.\n부부로서 첫걸음을 내딛는 순간에\n소중한 분들을 초대합니다.',
+  )}&location=${encodeURIComponent('파티움하우스 수원')}`;
+
   return (
     <InvitationWrapper>
       <Paragraph>{greeting.message}</Paragraph>
       <Host />
       <Caption textAlign={'center'}>{greeting.eventDetail}</Caption>
-      {/* TODO: 구글캘린더 추가하기 기능을 넣는다면 링크 수정 */}
-      <RoundButton
-        target="_blank"
-        href=""
-        rel="noreferrer">
+      <RoundButton target="_blank" href={googleCalendarURL} rel="noreferrer">
         구글 캘린더 추가하기
       </RoundButton>
     </InvitationWrapper>
